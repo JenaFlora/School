@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>About Jena Flora</title>
 <link type="text/css" rel="stylesheet" href="styles.css"/>
+<link type="text/css" rel="stylesheet" href="printStyles.css" media="print" />
 </head>
 <body>
-<header style= "color:#0066cc"><h1>A Bit More About Jena</h1></header>
+
+
+<script>
+function initialize()
+{
+  var mapProp = {
+    center: new google.maps.LatLng(39.845262,-84.328843),
+    zoom:17,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+function loadScript()
+{
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=&sensor=false&callback=initialize";
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+</script>
+
+<header><h1>A Bit More About Jena</h1></header>
 <hr/>
-<nav><h2><a href="index.html">Home </a> | <a href="aboutMe.html"> About me </a> | <a href="#">  HTML </a> | <a href="#"> C++ </a>| <a href="Projects.html"> Projects </a> | <a href="#"> Java </a> | <a href="#"> Web Design </a> | <a href="#"> BPA </a> 
-	| <a href="#"> Badges Earned </a> | <a href="#"> Discussion Board </a></h2></nav>
+<div id="container">
+<aside><nav><ul><li><a href="index.html">Home </a></li> 
+	<li><a class="active" href="aboutMe.html"> About me </a></li>
+	 <li><a href="HTML.html">  HTML </a></li> 
+	 <li><a href="CPlusPlus.html"> C++ </a></li>
+	  <li><a href="Projects.html"> Projects </a></li> 
+	  <li><a href="Java.html"> Java </a></li>  
+	  <li><a href="webDesign.html"> Web Design </a></li> 
+	  <li><a href="BPA.html"> BPA </a></li> 
+	 <li><a href="Badges.html"> Badges Earned </a></li> 
+	 <li><a href="discussionBoard.html"> Discussion Board </a></li>
+	 </ul></nav></aside>
 <section>
-	<article style="border-style: solid; border-width: 2px; border-color:#0066cc; margin:0px; padding:1px">
-		<p style="color:#0080ff"> 
+	<article class="boxed">
+		<p> 
 			I am currently attending the Miami Valley Career Technology Center for Game Programming and Web Applications, but my home school is Mississinawa Valley.
 			I live just outside of Union City, Ohio. I play Alto Saxophone in Mississinawa Valley's marching band and Jazz band. I enjoy doing that,
 			playing video games, and reading. Cats are my favorite animal so it's only natural for me to own some.
 			I have two cats, Rascal and Turtle. I also have a dachsund named Oliver. 
 			<br>
-		<img style="border-style: solid; border-width: 1px; border-color:#0066cc; margin:8px; padding:1px" src="aboutMe2.png">
-		<img src="wordle comp.gif">
+		<img class="imagebox" src="aboutMeTwo.png" alt="Picture of Jena">
+		<img src="wordlecomp.gif" alt="Wordle">
 	    </p>
+	    <div id="googleMap" style="width:500px;height:500px;"> </div>
 	</article>
 </section>
-<footer style="position:absolute"><p>&copy; Copyright 2016 Jena Flora jenaflora14@gmail.com All Rights Reserved</p></footer>
+</div>
+<footer><p>&copy; Copyright 2016 Jena Flora jenaflora14@gmail.com All Rights Reserved</p></footer>
 </body>
 </html>
